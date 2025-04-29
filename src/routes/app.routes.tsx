@@ -29,7 +29,7 @@ export function AppRoutes() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: tokens.colors.gray500,
+        tabBarActiveTintColor: tokens.colors.green500,
         tabBarInactiveTintColor: tokens.colors.gray200,
         tabBarStyle: {
           backgroundColor: tokens.colors.gray600,
@@ -38,6 +38,7 @@ export function AppRoutes() {
           paddingBottom: tokens.space["10"],
           paddingTop: tokens.space["6"],
         },
+        tabBarLabelPosition: "beside-icon"
       }}
     >
       <Screen
@@ -70,7 +71,9 @@ export function AppRoutes() {
       <Screen
         name="exercise"
         component={Exercise}
-        options={{ tabBarButton: () => null }}
+        options={{ tabBarButton: () => null,tabBarItemStyle: {
+          display: 'none'
+        } }}
       />
     </Navigator>
   );
